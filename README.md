@@ -18,8 +18,7 @@ Duplicate `.env.example` into `.env` and input these values:
 - RPC_URL: rpc url of the fauceting chain
 - DEFAULT_FAUCET_ETH_AMOUNT: The token faucet amount per request
 - BASE_SCANNER_URL: Base URL of the transaction reviewing scanner
-
-Other configs like using UI and faucet application port can be set in `config.json`
+- APP_PORT: The port the faucet application application run on
 
 ## Run it (server side)
 
@@ -39,8 +38,8 @@ npm run tryFaucet
 
 The application can be view at the route `/faucet/ui`
 
-An example of calling to the faucet API in developemt mode, with `<dappPort>` and `<address>` are custom values:
+An example of calling to the faucet API in developemt mode, with `<APP_PORT>` and `<address>` are custom values:
 
 ```
-curl -s "http://localhost:<dappPort>/faucet/claim/<address>" | jq
+curl -s "http://localhost:<APP_PORT>/faucet/claim/<address>" | jq
 ```

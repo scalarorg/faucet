@@ -12,7 +12,7 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.get("/faucet/ui", async function (req, res) {
+app.get("/", async function (req, res) {
   if (globalParams.ENABLE_UI) {
     res.sendFile(path.join(__dirname, "/claim.html"));
   } else {
@@ -65,7 +65,7 @@ if (globalParams.ENABLE_SWAGGER) {
   };
 
   const specs = swaggerJsdoc(options);
-  app.use("/", serve, setup(specs, { explorer: false }));
+  app.use("/faucet/swagger", serve, setup(specs, { explorer: false }));
 }
 
 app.listen(globalParams.APP_PORT, () => {

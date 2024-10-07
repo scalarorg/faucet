@@ -36,10 +36,10 @@ npm run tryFaucet
 
 ## Client request
 
-The application can be view at the route `/faucet/ui`
-
 An example of calling to the faucet API in developemt mode, with `<APP_PORT>` and `<address>` are custom values:
 
 ```
 curl -s "http://localhost:<APP_PORT>/faucet/claim/<address>" | jq
 ```
+
+The application UI can be review locally at the root route `http://localhost:<APP_PORT>/`

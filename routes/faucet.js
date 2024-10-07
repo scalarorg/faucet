@@ -13,25 +13,10 @@
  *         schema:
  *           type: string
  *         required: true
- *         description: address to claim 
+ *         description: address to claim
  *     responses:
  *       200:
  *         description: Rerurns transaction informations
- *       403:
- *         description: Forbidden
- *   name: Query 
- * /faucet/available:
- *   get:
- *     summary: Total token available on faucet
- *     tags: [Query] 
- *     responses:
- *       200:
- *         description: Get total token available on faucet
- * /faucet/last-claim:
- *   get:
- *     summary: Get last claim on faucet
- *     tags: [Query] 
- *     responses:
- *       200:
- *         description: Get last claim on faucet
+ *       500:
+ *         description: Error occurred while processing the faucet request
  */

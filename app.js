@@ -65,7 +65,7 @@ if (globalParams.ENABLE_SWAGGER) {
   };
 
   const specs = swaggerJsdoc(options);
-  app.use("/swagger", serve, setup(specs, { explorer: false }));
+  app.use("/faucet/swagger", serve, setup(specs, { explorer: false }));
 }
 
 app.listen(globalParams.APP_PORT, () => {
